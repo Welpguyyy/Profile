@@ -136,7 +136,7 @@ export default function Home() {
             engineering. Specializing in building accessible, high-performance web applications.
           </p>
           <div className={styles.buttons}>
-            <a href="/resume.pdf" className={styles.secondaryBtn}>
+            <a href="/Resume.pdf" className={styles.secondaryBtn}>
               Download Resume
             </a>
           </div>
