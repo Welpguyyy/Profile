@@ -120,7 +120,20 @@ export default function Home() {
             </button>
           </li>
         </ul>
-        <div className={styles.profileCircle}></div>
+        <a 
+          href="https://github.com/Welpguyyy" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.profileCircle}
+        >
+          <Image 
+            src="/profile.jpg" 
+            alt="Profile" 
+            width={40} 
+            height={40}
+            style={{ borderRadius: '50%', objectFit: 'cover' }}
+          />
+        </a>
       </nav>
 
       {/* Scrollable main content */}
