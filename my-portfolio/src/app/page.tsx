@@ -377,8 +377,7 @@ export default function Home() {
           <h3 className={styles.contactSubtitle}>Get In Touch</h3>
           <h2 className={styles.title}>Let's work together</h2>
           <p className={styles.description}>
-            Have a project in mind or just want to chat? I'd love to hear from you. Drop me a message
-            and I'll get back to you as soon as possible.
+           I’m currently seeking an opportunity to apply my skills and gain hands-on experience through on-the-job training. Please don’t hesitate to reach out — I’d be glad to discuss how I can contribute to your team.
           </p>
 
           <div className={styles.contactCards}>
