@@ -3,11 +3,6 @@
     "dev": "cd my-portfolio && npm run dev",
     "build": "cd my-portfolio && npm run build",
     "start": "cd my-portfolio && npm run start"
-  },
-  "dependencies": {
-    "framer-motion": "^12.23.24",
-    "next": "^16.2.6",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6"
   }
 }
+
