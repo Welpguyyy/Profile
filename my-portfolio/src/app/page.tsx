@@ -145,8 +145,9 @@ export default function Home() {
             Hi, I'm <span className={styles.name}>Joram Entice</span>
           </h1>
           <p className={styles.heroSubtitle}>
-            I craft exceptional digital experiences that blend innovative design with robust
-            engineering. Specializing in building accessible, high-performance web applications.
+           I’m a Computer Engineering student passionate about web development and creating user-friendly applications. 
+           I enjoy building responsive and accessible projects while continuously improving my programming and 
+           design skills.
           </p>
           <div className={styles.buttons}>
             <a href="/Resume.pdf" className={styles.secondaryBtn}>
@@ -160,7 +161,7 @@ export default function Home() {
             <a href="https://github.com/Welpguyyy" target="_blank" rel="noopener noreferrer">
               <Image src="/github-svgrepo-com.svg" alt="GitHub" width={28} height={28} />
             </a>
-            <a href="mailto:zhient123@gmail.com">
+            <a href="mailto:entice.joramzhient@gmail.com">
               <Image
                 src="/mail_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.svg"
                 alt="Mail"
@@ -397,7 +398,7 @@ export default function Home() {
             <div className={styles.card}>
               <i className={`fas fa-envelope ${styles.icon}`}></i>
               <h4>Email</h4>
-              <p>zhient123@gmail.com</p>
+              <p>entice.joramzhient@gmail.com</p>
             </div>
 
             <div className={styles.card}>
