@@ -234,7 +234,7 @@ export default function Home() {
               {cards.map((card, i) => {
                 const leftIndex = (active - 1 + cards.length) % cards.length;
                 const rightIndex = (active + 1) % cards.length;
-             let posClass = isMobile
+                const posClass = isMobile
   ? "" // 🚨 mobile: no carousel positioning
   : i === active
     ? styles.center
