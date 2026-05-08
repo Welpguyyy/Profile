@@ -632,9 +632,21 @@
   border-radius: 12px;
 }
 
+/* DESKTOP: only center card flips */
 .flipCard.center:hover .flipInner,
 .flipCard.center:focus-within .flipInner {
   transform: rotateY(180deg);
+}
+
+/* MOBILE: all cards can flip */
+@media (max-width: 700px) {
+
+  .flipCard:hover .flipInner,
+  .flipCard:focus-within .flipInner,
+  .flipCard:active .flipInner {
+    transform: rotateY(180deg);
+  }
+
 }
 
 .flipFront,
@@ -731,9 +743,15 @@
 }
 
 /* Positions */
-.left { transform: translate(-170%, -50%) rotate(-12deg) scale(0.92) !important; z-index: 10 !important; pointer-events: none; }
+.left {
+  transform: translate(-170%, -50%) rotate(-12deg) scale(0.92) !important;
+  z-index: 10 !important;
+}
 .center { transform: translate(-50%, -50%) rotate(0deg) scale(1.06) !important; z-index: 30 !important; pointer-events: auto; box-shadow: 0 18px 40px rgba(2,6,23,0.6); }
-.right { transform: translate(60%, -50%) rotate(12deg) scale(0.92) !important; z-index: 10 !important; pointer-events: none; }
+.right {
+  transform: translate(60%, -50%) rotate(12deg) scale(0.92) !important;
+  z-index: 10 !important;
+}
 
 /* Deck controls */
 .controlBtn {
@@ -1008,6 +1026,96 @@
   font-size: 0.85rem;
 }
 
+@media (max-width: 700px) {
+
+  /* ========================= */
+  /* PROJECTS MOBILE LAYOUT    */
+  /* ========================= */
+
+  .deckRow {
+    flex-direction: column !important;
+    gap: 2rem !important;
+    width: 100%;
+  }
+
+  .deck {
+    position: static !important;
+
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+
+    gap: 32px !important;
+  }
+
+  .flipCard {
+    position: relative !important;
+
+    top: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: 90% !important;
+    max-width: 340px !important;
+    height: 260px !important;
+
+    margin: 0 !important;
+
+    pointer-events: auto !important;
+
+    z-index: auto !important;
+  }
+
+  /* REMOVE FAN/CAROUSEL EFFECT */
+  .left,
+  .center,
+  .right {
+    position: relative !important;
+
+    transform: none !important;
+
+    scale: 1 !important;
+    rotate: 0deg !important;
+
+    z-index: auto !important;
+
+    pointer-events: auto !important;
+  }
+
+  /* DISABLE DESKTOP HOVER SCALING */
+  .deck:hover .center {
+    transform: none !important;
+  }
+
+  /* REMOVE ABSOLUTE HOVER STACKING */
+  .deck .flipCard:hover,
+  .deck .flipCard:focus-within {
+    z-index: auto !important;
+    box-shadow: none !important;
+  }
+
+  /* KEEP CONTENT NORMAL */
+  .backContent {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  /* HIDE ARROWS */
+  .controlBtn {
+    display: none !important;
+  }
+
+  /* MOBILE TITLE ADJUSTMENTS */
+  .heroTitle {
+    font-size: 2.2rem;
+  }
+}
 
 
 

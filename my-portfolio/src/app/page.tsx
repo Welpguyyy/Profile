@@ -6,6 +6,7 @@ import { useState } from "react";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 700;
   // smooth scroll logic
   const scrollToSection = (id: string) => {
     const container = document.querySelector(`.${styles.mainContent}`) as HTMLElement | null;
@@ -233,19 +234,24 @@ export default function Home() {
               {cards.map((card, i) => {
                 const leftIndex = (active - 1 + cards.length) % cards.length;
                 const rightIndex = (active + 1) % cards.length;
-                let posClass = "";
-                if (i === active) posClass = styles.center;
-                else if (i === leftIndex) posClass = styles.left;
-                else if (i === rightIndex) posClass = styles.right;
+             let posClass = isMobile
+  ? "" // 🚨 mobile: no carousel positioning
+  : i === active
+    ? styles.center
+    : i === leftIndex
+      ? styles.left
+      : i === rightIndex
+        ? styles.right
+        : "";
                 const isActive = i === active;
 
                 return (
                   <div
                     key={i}
                     className={`${styles.flipCard} ${posClass}`}
-                    tabIndex={isActive ? 0 : -1}
+                    tabIndex={isMobile ? 0 : (isActive ? 0 : -1)}
                     role={isActive ? "button" : undefined}
-                    aria-hidden={!isActive}
+                    aria-hidden={false}
                     aria-label={isActive ? `Project card: ${card.title}` : undefined}
                   >
                     <div className={styles.flipInner}>
