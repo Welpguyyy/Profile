@@ -1,7 +1,7 @@
 {
   "version": 2,
   "buildCommand": "cd my-portfolio && npm run build",
-  "installCommand": "npm install && cd my-portfolio && npm install"
+  "installCommand": "cd my-portfolio && npm install"
 }
 
 
