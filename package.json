@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "dev": "cd my-portfolio && npm run dev",
+    "build": "cd my-portfolio && npm run build",
+    "start": "cd my-portfolio && npm run start"
+  },
   "dependencies": {
     "framer-motion": "^12.23.24"
   }
