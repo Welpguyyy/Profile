@@ -145,9 +145,9 @@ export default function Home() {
             Hi, I'm <span className={styles.name}>Joram Entice</span>
           </h1>
           <p className={styles.heroSubtitle}>
-           I’m a Computer Engineering student passionate about web development and creating user-friendly applications. 
-           I enjoy building responsive and accessible projects while continuously improving my programming and 
-           design skills.
+            I’m a Computer Engineering student passionate about web development and creating user-friendly applications. 
+            I enjoy building responsive and accessible projects while continuously 
+            improving my programming and design skills.
           </p>
           <div className={styles.buttons}>
             <a href="/Resume.pdf" className={styles.secondaryBtn}>

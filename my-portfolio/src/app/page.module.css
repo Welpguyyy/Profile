@@ -931,17 +931,17 @@
   transform: translateY(-6px);
 }
 
-/* Ensure contact card paragraph (email/text) is centered and wraps nicely */
+/* Center heading and email text inside contact cards */
+.card h4,
 .card p {
+  display: block;
+  width: 100%;
   text-align: center;
+  margin: 0.35rem 0 0;
   word-break: break-word;
-  margin: 0.25rem 0 0;
 }
 
-/* Slightly smaller email text to fit horizontally in the card */
-.card p {
-  font-size: 0.9rem;
-}
+.card p { font-size: 0.95rem; }
 
 .icon {
   font-size: 30px; /* bigger icon */
@@ -972,11 +972,6 @@
   color: #fff;
   outline: none;
   resize: none;
-}
-
-/* Center the text inside the email input for a balanced appearance */
-.form input[type="email"] {
-  text-align: center;
 }
 
 .form input:focus,
