@@ -614,6 +614,14 @@
   height: 260px;
 }
 
+/* Make cards appear clickable and support programmatic flipping */
+.flipCard { cursor: pointer; }
+
+/* when `.flipped` is added by JS, rotate the inner to show the back */
+.flipCard.flipped .flipInner {
+  transform: rotateY(180deg);
+}
+
 .flipInner {
   position: relative;
   width: 100%;
